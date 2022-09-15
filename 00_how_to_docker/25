@@ -1,0 +1,4 @@
+/*VM*/
+docker service logs -f engineering-bay' 'docker service logs -f marines
+/*Another terminal*/
+docker service create -d --name marines --replicas=2 --network overmind -e OC_USERNAME=reijjo -e OC_PASSWD=1234 42school/marine-squad

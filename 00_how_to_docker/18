@@ -1,0 +1,1 @@
+docker swarm init --advertise-addr 10.13.199.210 (ip from 'ip a')

@@ -1,0 +1,5 @@
+/*VM*/
+docker swarm join-token worker
+/*iMac*/
+docker swarm join --token SWMTKN-1-2uhdy82hbntwudfq01oug13i45b5rzqyzs7p2oz6p476c8e1aq-52t54qbph93xfdk0rm6mnbjgk 10.13.199.210:2377
+/*VM: 'docker node ls' to see that there is the iMac is connected to swarm*/

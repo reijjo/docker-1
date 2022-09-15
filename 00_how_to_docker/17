@@ -1,0 +1,30 @@
+#Installing docker to VM:
+#Update existing list of packages:
+		sudo apt update
+#Install prerequisite packages which let apt use packages over HTTPS:
+		sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+#Add the GPG key for the official Docker repository to your system:
+		curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+#Add the Docker repository to APT sources:
+		sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+#Update the package database with the Docker packages from the newly added repo:
+		sudo apt update
+#Make sure you are about to install from the Docker repo instead of the default Debian repo:
+		apt-cache policy docker-ce
+#Finally, install Docker:
+		sudo apt install docker-ce -y
+#Docker is now installed, the daemon started, and the process enabled to start on boot. Check that it's running:
+		sudo systemctl status docker
+#Add yourself to docker group:
+		sudo usermod -aG docker reijjo
+#Log out and in:
+		su - reijjo
+#Confirm that your user is now added to the docker group:
+		id -nG
+#Check that docker works:
+		docker run hello-world
+
+#17. CREATE LOCAL SWARM ON VM:
+		docker swarm init --advertise-addr 10.13.199.210 (ip from 'ip a')
+		docker node ls
+			shows info about nodes

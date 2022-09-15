@@ -1,0 +1,7 @@
+apt update
+apt upgrade -y
+apt install vim -y
+apt install build-essential -y
+apt-get install git -y
+
+# docker run -it --rm debian
