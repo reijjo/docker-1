@@ -5,4 +5,3 @@ In the Docker project first, you learn to use basic commands to use actual Docke
 After that, we start to handle different kinds of containers and combine those.
 The last part of the project is to make your own Dockerfiles and for example, launch your local Gitlab server.
           
-
